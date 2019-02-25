@@ -6,8 +6,9 @@ using namespace std;
 
 class Rational
 {
-public:
+private:
 	int n, m;
+public:	
 
 	Rational(); // Konstruktor po umolchaniyu
 	Rational(const Rational &t); // Konstruktor kopirovaniya
@@ -16,7 +17,7 @@ public:
 	~Rational();//Destruktor
 
 	friend ostream & operator << (ostream & stream, const Rational &c);
-	friend istream & operator >> (ifstream & stream, Rational &c);
+	friend istream & operator >> (istream & stream, Rational &c);
 
 	Rational & operator = (const Rational &c);//Peregruzka =
 	Rational operator + (const Rational &c);//Peregruzka +
@@ -28,4 +29,4 @@ public:
 };
 
 ostream& operator<<(ostream & stream, const Rational &c);//Peregruzka vivoda
-istream & operator >> (ifstream & stream, Rational &c);//Peregruzka vvoda
+istream & operator >> (istream & stream, Rational &c);//Peregruzka vvoda

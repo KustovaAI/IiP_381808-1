@@ -16,6 +16,7 @@ Rational::Rational(int _n, int _m)//Konstruktor inicializacii
 Rational::Rational(int _m)//Konstruktor preobrazovaniya tipa
 {
 	m = 1;
+	n = 1;
 }
 Rational::~Rational()//Destructor
 {
@@ -70,16 +71,10 @@ bool Rational::operator==(const Rational & c)//Peregruzka =
 }
 ostream & operator << (ostream & stream, const Rational & c)//Vivod v potok
 {
-	if ((c.n == 0) && (c.m != 0))
-		stream << 0 << endl;
-	else
-		if (c.m == 0)
-			stream << " - " << endl;
-		else
-			stream << c.n << " / " << c.m << endl;
+	stream << c.n << " " << c.m << endl;
 	return stream;
 }
-istream & operator>>(ifstream & stream, Rational & c)//Vvod v potok
+istream& operator>>(istream & stream, Rational & c)//Vvod v potok
 {
 	stream >> c.n >> c.m;
 	return stream;
