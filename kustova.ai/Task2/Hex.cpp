@@ -9,7 +9,7 @@ using namespace std;
 
 Hex::Hex()//Konstruktor po umolchaniyu
 {
-	size = 0;
+	
 	length = 0;
 	a = 0;
 }
@@ -33,15 +33,18 @@ Hex::~Hex()//Destructor
 {
 	delete[]a;
 	length = 0;
-	size = 0;
+	
 }
 
 
 Hex & Hex::operator=(const Hex & c)//Peregruzka =
 {
-	length = c.length;
-	delete[] a;
-	a = new unsigned char[length];
+	if (length != c.length)
+	{
+		length = c.length;
+		delete[] a;
+		a = new unsigned char[length];
+	}
 	for (int i = 0; i < length; i++)
 	{
 		a[i] = c.a[i];

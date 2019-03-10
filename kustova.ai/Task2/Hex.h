@@ -10,7 +10,7 @@ class Hex
 private:
 	unsigned char *a;
 	int length;
-	int size;
+	
 public:
 	
 	Hex(); // Konstruktor po umolchaniyu	
