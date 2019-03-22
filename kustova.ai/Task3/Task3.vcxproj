@@ -146,6 +146,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Integrals.cpp" />
+    <ClCompile Include="IntegralsTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Integrals.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
