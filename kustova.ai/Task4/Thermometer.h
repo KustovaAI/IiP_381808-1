@@ -3,20 +3,25 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "Event.h"
+
 using namespace std;
 
 class Thermometer
 {
 private:
-	Event *thermometer;
+	
 	int size;
+	int *year;
+	int *month;
+	int *day;
+	int *hour;
+	int *temp;
 
 public:
 
 	Thermometer(); // Konstruktor po umolchaniyu	
 	~Thermometer();//Destruktor
-
+	
 	void StartDate();//(1) - Start date and timeob observation
 	void Add();	//(2) - Dobavit nablyudenie
 	void Find_Temp();	//(3)-Poisk temperaturi po date
