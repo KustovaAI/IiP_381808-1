@@ -9,8 +9,9 @@ using namespace std;
 class Thermometer
 {
 private:
-	
-	int size;
+	int size_buf;	//razmer bufera
+	int size;	//realnoe kol-vo izmereniy
+	int del_buf;
 	int *year;
 	int *month;
 	int *day;
@@ -19,7 +20,7 @@ private:
 
 public:
 
-	Thermometer(); // Konstruktor po umolchaniyu	
+	Thermometer(string fileName);
 	~Thermometer();//Destruktor
 	
 	void StartDate();//(1) - Start date and timeob observation

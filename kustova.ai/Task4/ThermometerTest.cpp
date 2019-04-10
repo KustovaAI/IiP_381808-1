@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	Thermometer c1;
+	Thermometer c1("Thermometer.txt");
 	int n1;
 	def2:
 	cout << "Choose action: " << endl;
