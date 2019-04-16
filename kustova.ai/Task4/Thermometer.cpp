@@ -11,14 +11,13 @@ using namespace std;
 
 Thermometer::Thermometer(string fileName) 
 {	
-	size_buf = 15;
 	del_buf = 10;
 	size = 0;
 	ifstream is;
 	is.open(fileName);
 	is >> size;
 	//thermometer = new Thermometer[size];
-	int index = 0;
+	size_buf = size;
 	year = new int[size_buf];
 	month = new int[size_buf];
 	day = new int[size_buf];
@@ -26,13 +25,8 @@ Thermometer::Thermometer(string fileName)
 	temp = new int[size_buf];
 	for (int i = 0; i < size; i++)
 	{
-		int a[5];
-		is >> a[0] >> a[1] >> a[2] >> a[3] >> a[4];
-		year[i] = a[0];
-		month[i] = a[1];
-		day[i] = a[2];
-		hour[i] = a[3];
-		temp[i] = a[4];
+		is >> year[i] >> month[i] >> day[i] >> hour[i] >> temp[i];
+		
 	}
 	is.close();
 }
@@ -124,25 +118,13 @@ void Thermometer::Add()	// Dobavit nablyudenie
 		delete[] day;
 		delete[] hour;
 		delete[] temp;
-		//Kopirovanie novogo massiva
-		year = new int[size_buf];
-		month = new int[size_buf];
-		day = new int[size_buf];
-		hour = new int[size_buf];
-		temp = new int[size_buf];
-		for (int i = 0; i < size; i++)
-		{
-			year[i] = tmp_y[i];
-			month[i] = tmp_m[i];
-			day[i] = tmp_d[i];
-			hour[i] = tmp_h[i];
-			temp[i] = tmp_t[i];
-		}
-		delete[] tmp_y;
-		delete[] tmp_m;
-		delete[] tmp_d;
-		delete[] tmp_h;
-		delete[] tmp_t;
+		
+		year = tmp_y;
+		month = tmp_m;
+		day = tmp_d;
+		hour = tmp_h;
+		temp = tmp_t;
+		
 	}
 	cout << "Observation successfully added" << endl;
 
