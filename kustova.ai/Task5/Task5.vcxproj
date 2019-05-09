@@ -146,6 +146,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bank.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="Depozit.h" />
+    <ClInclude Include="ProcCenter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Bank.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Depozit.cpp" />
+    <ClCompile Include="ProcCenter.cpp" />
+    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
